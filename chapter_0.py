@@ -22,3 +22,44 @@ len(set())
 print(dir(deck))
 
 print(help(deck.add))
+
+for suit in suits:
+    for card in faces + numbered:
+        deck.add((card, "of", suit))
+        
+print(len(deck))
+
+print(deck)
+
+print()
+
+card = random.choice(list(deck))
+print(card)
+
+# for _  in range(5):
+#     card = random.choice(list(deck))
+#     print(card)
+#     deck.remove(card)
+    
+print(len(deck))
+deck.remove(card)
+print(len(deck))
+
+# Sharpen your pencil pg25
+
+def draw():
+    card = random.choice(list(deck))
+    deck.remove(card)
+    return card
+
+print(draw())
+
+card = ("ace", "of", "hearts")
+
+# card in deck
+
+if card in deck:
+    print("Yes")
+else:
+    print("No")
+    
